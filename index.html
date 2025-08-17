@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelem Richard Bampoe-Addo • Website Portfolio</title>
+  <meta name="description" content="Hello, I'm Kelem — a frontend developer in training (MEST GROW Program) based in Accra, Ghana." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- SVG ICON SPRITE -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v1l-10 6L2 7V6a2 2 0 0 1 2-2m18 6l-10 6L2 10v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-9.65 16v-7.2H7.06V19zm-.97-8.36a1.22 1.22 0 1 0 0-2.44a1.22 1.22 0 0 0 0 2.44M20 19h-2.3v-3.69c0-2.2-2.33-2.02-2.33 0V19h-2.28v-7.2h2.28v1.11c1.06-1.96 5.63-2.11 5.63 1.88z"/></symbol>
+    <symbol id="i-medium" viewBox="0 0 24 24"><path fill="currentColor" d="M4 7.5c.08-.8-.23-1.58-.84-2.1V5h5l3.86 8.47L15.4 5H20v.4c-.5.5-.84 1.18-.86 1.9V17a2 2 0 0 0 .86 1.6V19h-5.7v-.4c.56-.42.93-1.05.98-1.75v-8.7L10.9 19H10L5.9 8.12V16.8c.02.8.37 1.56.98 2.07V19H3v-.4A2 2 0 0 0 4 17z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path fill="currentColor" d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79zM1 13h3v-2H1zm10 10h2v-3h-2zM4.84 20.83l1.79-1.79l-1.8-1.79l-1.79 1.79zM20 13h3v-2h-3zm-1.76-8.16l-1.79 1.79l1.8 1.79l1.79-1.79zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m1-6h-2v3h2zM19.16 20.83l1.79-1.79l-1.8-1.79l-1.79 1.79z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9q0-.63-.08-1.23A7 7 0 0 1 12 3"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path fill="currentColor" d="M7 14l5-5l5 5z"/></symbol>
+    <symbol id="i-html" viewBox="0 0 24 24"><path fill="currentColor" d="m3 3l1.64 18.5L12 23l7.36-1.5L21 3zm15.22 5.79h-9.3l.16 1.84h8.99l-.72 8l-5.35 1.47l-5.35-1.47l-.36-4.06h2.6l.18 2.07l2.93.79l2.94-.79l.32-3.55H7.24l-.68-7h10.87z"/></symbol>
+    <symbol id="i-css" viewBox="0 0 24 24"><path fill="currentColor" d="m3 3l1.64 18.5L12 23l7.36-1.5L21 3zm14.5 5.3H8.66l.15 1.7h8.6l-.61 6.77L12 19.13l-4.8-1.36l-.28-3.18h2.36l.13 1.45l2.59.73l2.6-.73l.28-3.11H6.78L6.2 6.2h11.3z"/></symbol>
+    <symbol id="i-js" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h18v18H3zM8.7 17.3c0 1.76-1.03 2.57-2.5 2.57c-.93 0-1.47-.24-1.9-.54l.66-1.1c.33.21.63.37 1.16.37c.6 0 .98-.3 .98-1.15v-6.2h1.6zm3.06-4.52c0-2.04 1.2-3.35 3.03-3.35c1.34 0 2.2.67 2.64 1.48l-1.12.74c-.24-.42-.7-.76-1.26-.76c-.9 0-1.44.66-1.44 1.89v2.86c0 1.23.54 1.9 1.44 1.9c.56 0 1.02-.35 1.26-.76l1.12.72c-.44 .82-1.3 1.5-2.64 1.5c-1.83 0-3.03-1.32-3.03-3.36z"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><path fill="currentColor" d="M2.6 11.2L11.2 2.6a1.4 1.4 0 0 1 2 0l8.2 8.2a1.4 1.4 0 0 1 0 2L12 21.2a1.4 1.4 0 0 1-2 0l-7.4-7.4a1.4 1.4 0 0 1 0-2m6.8 1.8a1.8 1.8 0 1 0 3.4 0V9.9l2.2 2.2a1.8 1.8 0 1 0 1.2-.9L12.9 9V6.9a1.8 1.8 0 1 0-1.2.9v1.6z"/></symbol>
+    <symbol id="i-python" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 3h5a3.5 3.5 0 0 1 3.5 3.5V9h-7A2.5 2.5 0 0 1 8.5 6.5V3.8A.8.8 0 0 1 9.3 3m-2.8 4H7v2h-.3A3.7 3.7 0 0 1 3 5.3V5h3.7M20 12.5v3a3.5 3.5 0 0 1-3.5 3.5h-5A2.5 2.5 0 0 1 9 16.5V15h7a2.5 2.5 0 0 0 2.5-2.5v-1.7h.8a.7.7 0 0 1 .7.7M11 5.6a.9.9 0 1 0 0 1.8a.9.9 0 0 0 0-1.8m2 12a.9.9 0 1 0 0 1.8a.9.9 0 0 0 0-1.8"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 1 1 0 14A7 7 0 0 1 12 2m0 16l4 4l-1-5l-3 1l-3-1l-1 5z"/></symbol>
+    <symbol id="i-certificate" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v9H2V5a2 2 0 0 1 2-2m-2 13h6l2 5l2-5h10v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-8.9 8.9l-1.4-1.4L17.6 5H14zM5 5h6v2H7v10h10v-4h2v6H5z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path fill="currentColor" d="M10 4h4a2 2 0 0 1 2 2h3a2 2 0 0 1 2 2v3H3V8a2 2 0 0 1 2-2h3a2 2 0 0 1 2-2m-7 9h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12V2M8 4h8v14H8z"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><path fill="currentColor" d="M21 19V5H3v14zm0 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2M8.5 13.5 11 17l2.5-3l3.5 4H7zM8 8a2 2 0 1 1-2 2a2 2 0 0 1 2-2"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav">
+       <button id="themeToggle" class="icon-btn" aria-label="Toggle theme"><svg><use href="#i-sun"/></svg></button>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certs</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="btn small">Contact</a>
+       
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container" id="home">
+      <div class="hero-text reveal">
+        <p class="kicker">Hello, I’m</p>
+        <h1>Kelem Bampoe-Addo</h1>
+        <p class="sub">Web Developer Trainee | MEST Africa • GROW Program (2025)</p>
+        <div class="btn-row">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Hire Me</a>
+          <a class="btn ghost" href="#" onclick="alert('https://docs.google.com/document/d/1BdReqc4VAYbUKKLKgWRIhwfMnBruRCEUqaZ5h2qvL7M/edit?usp=sharing'); return false;">Download CV</a>
+        </div>
+        <div class="quick-links">
+          <a href="mailto:kelembampoeaddo@gmail.com" class="icon-link"><svg><use href="#i-mail"/></svg> Email</a>
+          <a href="https://www.linkedin.com/in/kelem" target="_blank" rel="noopener" class="icon-link linkedin"><svg><use href="#i-linkedin"/></svg> LinkedIn</a>
+          <a href="https://medium.com/@kelembampoeaddo" target="_blank" rel="noopener" class="icon-link"><svg><use href="#i-medium"/></svg> Medium</a>
+        </div>
+      </div>
+      <div class="hero-image reveal small-headshot">
+        <img src="images/profile-placeholder.jpg" alt="Profile placeholder for Kelem Richard Bampoe-Addo"/>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="container" id="about">
+      <div class="section-head">
+        <h2>About</h2><span class="pill">Personal statement</span>
+      </div>
+      <div class="about-card">
+        <p>
+          I’m a people‑centred, curious <strong>frontend developer in training</strong> who enjoys turning ideas into clear, accessible interfaces.
+          At <strong>MEST GROW program,</strong> I’m growing fast with Python, HTML, CSS and JavaScript, while my background in Political Science helps me
+          communicate clearly, work in teams, and build for real users.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="container" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <span class="pill">Built during training</span>
+      </div>
+      <div class="card-grid">
+        <article class="card hover reveal">
+          <img src="images/project-1.jpg" alt="Portfolio website screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>Portfolio Website</h3>
+            <div class="badges"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="#" onclick="alert('Add GitHub link'); return false;"><svg><use href="#i-external"/></svg> GitHub</a>
+              <a class="btn small ghost" href="#contact">Request Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="card hover reveal">
+          <img src="images/project-2.jpg" alt="Team sprint app screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>Team Web App Sprint</h3>
+            <div class="badges"><span>UI</span><span>Agile</span><span>Presentation</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="#" onclick="alert('Add demo or slides'); return false;"><svg><use href="#i-external"/></svg> Demo</a>
+              <a class="btn small ghost" href="#" onclick="alert('Add GitHub link'); return false;">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card hover reveal">
+          <img src="images/project-3.jpg" alt="Python mini projects screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>Python Mini‑Projects</h3>
+            <div class="badges"><span>Python</span><span>Logic</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="#" onclick="alert('Add GitHub link'); return false;"><svg><use href="#i-external"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="container" id="skills">
+      <div class="section-head">
+        <h2>Skills</h2><span class="pill">Core tools</span>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-python"/></svg><span>Python (beginner)</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-html"/></svg><span>HTML5</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-css"/></svg><span>CSS3</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-js"/></svg><span>JavaScript</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-git"/></svg><span>Git & GitHub</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-briefcase"/></svg><span>ClickUp</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-book"/></svg><span>Google Workspace</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-image"/></svg><span>Canva Pro</span></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="container" id="experience">
+      <div class="section-head">
+        <h2>Experience</h2><span class="pill">Recent</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Administrator & Project Coordinator — Space Turnkey Solutions</h3>
+            <p class="meta">2023–Present • Hybrid</p>
+            <ul class="mini">
+              <li>Built ClickUp boards and automated reminders.</li>
+              <li>Standardized Google Sheets/Docs trackers.</li>
+              <li>Structured action items and weekly dashboards.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Tech & Society Writer — Medium</h3>
+            <p class="meta">2023–Present • Remote</p>
+            <ul class="mini">
+              <li>Published on AI and governance in Africa.</li>
+              <li>Deep Learning Indaba 2023 reflections.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="container" id="certs">
+      <div class="section-head">
+        <h2>Certifications & Training</h2><span class="pill">Proof</span>
+      </div>
+      <ul class="cert-list">
+        <li class="cert-item reveal"><svg><use href="#i-certificate"/></svg> MEST Africa — GROW Web Developer Program (Aug–Nov 2025)</li>
+        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Deep Learning Indaba 2023 — Certificate of Participation</li>
+        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Ghana Data Science Conference 2024 — Certificate of Participation</li>
+        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Web Development Fundamental (IBM) — Issued Apr 2025</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="container" id="education">
+      <div class="section-head">
+        <h2>Education</h2><span class="pill">Academic</span>
+      </div>
+      <ul class="cert-list">
+        <li class="cert-item reveal"><svg><use href="#i-book"/></svg> University of Ghana — BA Political Science (2017–2021)</li>
+      </ul>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="container" id="gallery">
+      <div class="section-head">
+        <h2>Gallery</h2><span class="pill">Deep Learning Indaba</span>
+      </div>
+      <div class="gallery-grid">
+        <img class="shot" src="images/gallery-1.jpg" alt="Gallery photo 1" />
+        <img class="shot" src="images/gallery-2.jpg" alt="Gallery photo 2" />
+        <img class="shot" src="images/gallery-3.jpg" alt="Gallery photo 3" />
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="container" id="contact">
+      <div class="contact-card reveal">
+        <h2>Let’s work together</h2>
+        <p class="muted">Open to frontend immersion and junior roles.</p>
+        <div class="btn-row">
+          <a class="btn" href="mailto:kelembampoeaddo@gmail.com"><svg><use href="#i-mail"/></svg> Email</a>
+          <a class="btn ghost linkedin" href="https://www.linkedin.com/in/kelem" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg> LinkedIn</a>
+          <a class="btn ghost" href="https://medium.com/@kelembampoeaddo" target="_blank" rel="noopener"><svg><use href="#i-medium"/></svg> Medium</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Kelem Richard Bampoe‑Addo</div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="toTop" class="to-top" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
