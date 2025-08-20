@@ -83,8 +83,19 @@ a:hover{text-decoration:underline}
 .cert-item svg{width:18px;height:18px;color:var(--brand)}
 
 /* Gallery */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.shot{border-radius:14px;border:1px solid var(--border);cursor:zoom-in}
+.gallery-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; }
+
+/* Make figure the grid item and remove default spacing */
+.gallery-grid figure { margin:0; }
+
+/* Stack image + caption with a small gap */
+.shot-item { display:flex; flex-direction:column; gap:8px; }
+
+/* Keep your existing image styling */
+.shot { display:block; width:100%; border-radius:14px; border:1px solid var(--border); cursor:zoom-in; }
+
+/* Caption style (placeholder text) */
+.shot-caption { font-size:.9rem; line-height:1.4; text-align:center; color:var(--muted, #6b7280); }
 
 /* Contact */
 .contact-card{border:1px solid var(--border);border-radius:16px;padding:18px;background:color-mix(in hsl, var(--card) 94%, transparent);text-align:center}
@@ -137,6 +148,9 @@ a:hover{text-decoration:underline}
 :root.light{
   --texture-dot: color-mix(in hsl, var(--text) 8%, transparent);
 }
+
+@media (max-width: 768px){ .gallery-grid { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width: 480px){ .gallery-grid { grid-template-columns:1fr; } }
 
 /* Put a click-through texture on top of everything */
 body::before{

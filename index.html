@@ -115,8 +115,17 @@
             <h3>Team Web App Sprint</h3>
             <div class="badges"><span>UI</span><span>Agile</span><span>Presentation</span></div>
             <div class="card-actions">
-              <a class="btn small" href="#" onclick="alert('Add demo or slides'); return false;"><svg><use href="#i-external"/></svg> Demo</a>
-              <a class="btn small ghost" href="#" onclick="alert('Add GitHub link'); return false;">GitHub</a>
+            <a class="btn small"
+              href="https://drive.google.com/file/d/1BB6-4ceTsCBSU90E14Zf5hHHI3lrYfg1/view"
+              target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#i-external"/></svg> Demo
+            </a>
+            <!-- If this should go to your GitHub profile -->
+            <a class="btn small ghost"
+              href="https://github.com/ordinarykelem"
+              target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
             </div>
           </div>
         </article>
@@ -214,12 +223,25 @@
       <div class="section-head">
         <h2>Gallery</h2><span class="pill">Deep Learning Indaba</span>
       </div>
+
       <div class="gallery-grid">
-        <img class="shot" src="images/gallery-1.jpg" alt="Gallery photo 1" />
-        <img class="shot" src="images/gallery-2.jpg" alt="Gallery photo 2" />
-        <img class="shot" src="images/gallery-3.jpg" alt="Gallery photo 3" />
+        <figure class="shot-item">
+          <img class="shot" src="images/gallery-1.jpg" alt="Gallery photo 1" loading="lazy" />
+          <figcaption class="shot-caption">Deep learning insights with Hugo Larochelle</figcaption>
+        </figure>
+
+        <figure class="shot-item">
+          <img class="shot" src="images/gallery-2.jpg" alt="Gallery photo 2" loading="lazy" />
+          <figcaption class="shot-caption">Advancing AI across Africa</figcaption>
+        </figure>
+
+        <figure class="shot-item">
+          <img class="shot" src="images/gallery-3.jpg" alt="Gallery photo 3" loading="lazy" />
+          <figcaption class="shot-caption">Stay curious. Keep building</figcaption>
+        </figure>
       </div>
     </section>
+
 
     <!-- CONTACT -->
     <section class="container" id="contact">
