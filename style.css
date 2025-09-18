@@ -54,6 +54,8 @@ a:hover{text-decoration:underline}
 
 /* Hero */
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;min-height:100vh;padding:24px 0 48px}
+.hero .hero-image{grid-column:1; grid-row:1}
+.hero .hero-text{grid-column:2; grid-row:1}
 .kicker{letter-spacing:.4px;color:var(--brand);font-weight:800;margin:0 0 .2rem;font-size:clamp(28px,4.2vw,44px);line-height:1.1;display:block}
 .hero h1{margin:.2rem 0 0;font-size:clamp(28px,4.2vw,44px);line-height:1.1}
 .hero h1{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 18px color-mix(in hsl, var(--brand) 20%, transparent))}
@@ -207,8 +209,9 @@ border:1px solid transparent;border-radius:var(--radius);overflow:hidden;transfo
 @media (max-width: 1000px){
   .skills-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
 }
-@media (max-width: 800px){
+@media (max-width: 640px){
   .hero{grid-template-columns:1fr}
+  .hero .hero-text, .hero .hero-image{grid-column:auto}
   .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .card-grid.grid-4{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
