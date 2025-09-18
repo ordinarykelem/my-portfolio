@@ -1,0 +1,53 @@
+﻿KELEM BAMPOE-ADDO
+kelembampoeaddo@gmail.com | +233577026284 | LinkedIn | GitHub | Portfolio | Accra, Ghana
+
+
+Summary
+Web Developer and Administrator with hands-on experience in HTML, CSS, JavaScript, and 
+Python (NiceGUI), skilled in deploying projects through GitHub, Netlify, and Render. Strong background in project coordination, administration, and documentation, ensuring smooth workflows and timely delivery. Proficient in digital design and content creation using Canva Pro and Figma, with an eye for detail and user-friendly solutions.
+Skills
+Frontend: HTML, CSS, JavaScript
+Programming: Python (NiceGUI)
+Workflow: Git & GitHub, ClickUp, Google Workspace
+Design: Canva Pro, Figma
+Soft Skills: Accessibility mindset, stakeholder communication, team leadership, fast learning
+Experience
+Administrator & Project Coordinator — Space Turnkey Solutions | Accra | 2023–Present
+ • Deployed ClickUp automations, raising task completion by 30% across 6+ projects.
+• Standardized reports in Google Workspace, improving leadership decision-making.
+• Coordinated timelines and SOPs, enabling smoother handovers and scalable workflows.
+Tech & Society Writer — Medium | Remote | 2023–Present
+ • Published 2 articles on AI and governance with 217+ views, 124 reads, and 17 claps.
+• Produced clear explainers on tech trends, driving engagement in the African tech community.
+• Built thought leadership by linking emerging technologies to real-world impact.
+Presiding Officer — Electoral Commission of Ghana | Multiple Regions | 2023 & 2024
+ • Directed polling for 1,200+ voters per cycle using biometric verification and digital tallies.
+• Managed 5 staff per station, ensuring efficient and compliant workflows.
+• Maintained 100% integrity and accurate records under strict national oversight.
+Projects
+Personal Portfolio Website — HTML, CSS, JavaScript
+• Responsive site with light/dark theme toggle, scroll-reveal animations, gallery lightbox, and contact links. (View Portfolio)
+ASA Site Visit Web App — (Live App)
+• Developed a responsive RSVP tool for scheduling and managing consultant site visits with streamlined Supabase integration.
+SpaceAccra Corporate Website — (Live Site)
+• Built a responsive corporate website showcasing company projects and services.
+Advertisement Management Platform — (Live Site)
+• Built a responsive CRUD marketplace for adverts with image handling, search, category filters, and seamless Supabase integration.
+Education
+________________
+
+
+University of Ghana — B.A. Political Science & Study of Religions (2017–2021)
+Leadership: President, Religions Students Association of Ghana (2020/2021)
+Certifications & Conferences
+MEST Africa GROW Web Developer Program (Aug–Nov 2025) – Intensive full-time training in web development and professional software workflows.
+IBM Web Development Fundamentals – Certificate (Apr 2025)
+Deep Learning Indaba 2023 – Volunteer & Participant, Pan-African AI conference (Accra, 2023)
+Ghana Data Science Summit 2023 – Participant, national data science conference and  workshops
+Skills
+Community & Leadership
+Community building (volunteer outreach), team leadership, mentorship, event coordination, public speaking.
+Content & Communication
+Content creation (blogs, guides, newsletters), social media engagement, technical explainers, Canva design, stakeholder communication.
+Technical & Tools
+Project management (ClickUp), collaboration (Google Workspace), version control (Git/GitHub), web development (HTML/CSS, basic JS & Python).

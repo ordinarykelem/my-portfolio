@@ -65,3 +65,60 @@ window.addEventListener('scroll', () => {
   else toTop.classList.remove('show');
 });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Subtle tilt motion on cards (respects reduced motion)
+(function addCardTilt() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = window.matchMedia('(hover: hover)').matches;
+  if (reduced || !canHover) return;
+
+  const cards = document.querySelectorAll('.card.hover');
+  cards.forEach(card => {
+    let rafId = null;
+    let currentX = 0, currentY = 0;
+    const maxTilt = 8; // degrees
+
+    const onMove = (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;   // 0..1
+      const y = (e.clientY - rect.top) / rect.height;   // 0..1
+      currentX = (x - 0.5) * 2; // -1..1
+      currentY = (y - 0.5) * 2; // -1..1
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rY = currentX * maxTilt;     // rotateY left/right
+        const rX = -currentY * maxTilt;    // rotateX up/down
+        card.style.transform = `perspective(900px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-6px) scale(1.01)`;
+      });
+    };
+
+    const onLeave = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      // Allow CSS hover transform to take back over
+      card.style.transform = '';
+    };
+
+    card.addEventListener('mousemove', onMove);
+    card.addEventListener('mouseleave', onLeave);
+  });
+})();
+
+// Make project cards open live links when clicked (and accessible)
+(function clickThroughCards(){
+  const cards = document.querySelectorAll('.card.hover[data-live]');
+  cards.forEach(card => {
+    const url = card.getAttribute('data-live');
+    if (!url) return;
+    card.addEventListener('click', (e) => {
+      // Don’t hijack clicks on inner anchors/buttons
+      if (e.target.closest('a, button')) return;
+      window.open(url, '_blank', 'noopener');
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.open(url, '_blank', 'noopener');
+      }
+    });
+  });
+})();

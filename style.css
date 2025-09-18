@@ -2,6 +2,9 @@
   --bg: #0b0f1a; --text: #e5e7eb; --muted:#9ca3af; --card:#0f1422;
   --brand:#22d3ee; --brand2:#a78bfa; --ring: rgba(34,211,238,.35);
   --btn:#1f2937; --border: rgba(255,255,255,.08);
+  --radius: 16px;
+  --ease-out: cubic-bezier(.22,1,.36,1);
+  --dur: .6s;
 }
 :root.light {
   --bg: #f8fafc; --text:#0f172a; --muted:#475569; --card:#ffffff;
@@ -9,12 +12,35 @@
   --btn:#e5e7eb; --border: rgba(2,6,23,.08);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 img{max-width:100%;display:block}
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 .muted{color:var(--muted)}
+
+/* Center section headers and content blocks for a clean, balanced look */
+.section-head{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;margin:6px 0 16px;text-align:center}
+.section-head h2{margin:0;font-size:22px;text-align:center}
+.pill{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:6px 10px;border-radius:999px}
+
+/* Keep copy left-aligned for readability but center the blocks themselves */
+.about-card{max-width:900px;margin-left:auto;margin-right:auto;text-align:left}
+.timeline{max-width:1000px;margin-left:auto;margin-right:auto}
+.cert-list{max-width:900px;margin-left:auto;margin-right:auto;width:fit-content}
+.gallery-grid{max-width:1000px;margin-left:auto;margin-right:auto}
+.contact-card{max-width:800px;margin-left:auto;margin-right:auto}
+
+/* Center items within grids */
+.card-grid{justify-items:center}
+.card{width:100%;max-width:360px}
+.skills-grid{justify-items:center}
+.skill-item{width:100%;max-width:220px;text-align:center}
+
+/* Center hero grid within its container and keep text readable */
+.hero{justify-content:center}
+.hero-text{max-width:560px;margin-left:auto;margin-right:auto;text-align:left}
+.hero-image{display:flex;align-items:center;justify-content:center}
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:color-mix(in hsl, var(--bg) 80%, transparent);border-bottom:1px solid var(--border)}
@@ -27,9 +53,10 @@ a:hover{text-decoration:underline}
 .icon-btn svg{width:18px;height:18px}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:24px 0 48px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;min-height:100vh;padding:24px 0 48px}
 .kicker{letter-spacing:.4px;color:var(--brand);font-weight:800;margin:0 0 .2rem;font-size:clamp(28px,4.2vw,44px);line-height:1.1;display:block}
 .hero h1{margin:.2rem 0 0;font-size:clamp(28px,4.2vw,44px);line-height:1.1}
+.hero h1{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 18px color-mix(in hsl, var(--brand) 20%, transparent))}
 .sub{margin:.4rem 0 0;color:var(--muted)}
 .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--btn);color:var(--text)}
@@ -39,6 +66,9 @@ a:hover{text-decoration:underline}
 .btn.ghost{background:transparent}
 .quick-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
 .icon-link{display:inline-flex;align-items:center;gap:8px;color:var(--text);border-bottom:1px dashed var(--border);padding-bottom:2px}
+.icon-link{position:relative}
+.icon-link::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:linear-gradient(90deg,var(--brand),transparent);opacity:0;transform:translateY(2px);transition:opacity .25s var(--ease-out), transform .25s var(--ease-out)}
+.icon-link:hover::after{opacity:.9;transform:translateY(0)}
 .icon-link svg{width:20px;height:20px}
 .icon-link.linkedin svg{ color:#0A66C2; }
 
@@ -52,34 +82,68 @@ a:hover{text-decoration:underline}
 .about-card p{margin:.4rem 0}
 
 /* Cards */
-.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.card{background:linear-gradient(180deg, color-mix(in hsl, var(--card) 96%, transparent), color-mix(in hsl, var(--card) 88%, transparent));border:1px solid var(--border);border-radius:16px;overflow:hidden;transform:translateY(0);transition:transform .25s ease, box-shadow .25s ease}
-.card.hover:hover{transform:translateY(-4px);box-shadow:0 8px 24px color-mix(in hsl, var(--bg) 50%, #000 50%)}
-.card-img{width:100%;height:180px;object-fit:cover}
-.card-body{padding:16px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:18px;justify-items:center;align-items:stretch}
+/* Explicit four-column grid helper */
+.card-grid.grid-4{grid-template-columns:repeat(4, minmax(280px, 1fr));justify-content:center;}
+.card{background:
+  linear-gradient(180deg, color-mix(in hsl, var(--card) 96%, transparent), color-mix(in hsl, var(--card) 88%, transparent)) padding-box,
+  linear-gradient(135deg, color-mix(in hsl, var(--brand) 65%, transparent), color-mix(in hsl, var(--brand2) 65%, transparent)) border-box;
+border:1px solid transparent;border-radius:var(--radius);overflow:hidden;transform:translateY(0);transition:transform .35s var(--ease-out), box-shadow .35s var(--ease-out), filter .35s var(--ease-out);width:100%;height:100%;max-width:360px;margin-left:auto;margin-right:auto}
+.card.hover:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 18px 36px color-mix(in hsl, var(--bg) 55%, #000 45%);filter:saturate(1.05)}
+.card.hover[data-live]{cursor:pointer}
+/* Visible focus for keyboard users on clickable cards */
+.card.hover[role="link"]:focus-visible{outline:2px solid var(--brand); outline-offset:3px; box-shadow:0 0 0 4px var(--ring)}
+/* Hover/focus badge to signal click opens live project */
+.card.hover[data-live]::after{
+  content:"View Live"; position:absolute; top:10px; right:10px;
+  font-size:12px; padding:4px 8px; border-radius:999px;
+  background:color-mix(in hsl, red 18%, transparent);
+  color:#ff4d4f; border:1px solid color-mix(in hsl, red 40%, transparent);
+  opacity:0; transform:translateY(-4px); transition:opacity .25s var(--ease-out), transform .25s var(--ease-out);
+}
+.card.hover[data-live]:hover::after, .card.hover[data-live]:focus-visible::after{opacity:1; transform:translateY(0)}
+.card-img{width:100%;height:180px;object-fit:cover;transform:translateZ(0);transition:transform .45s var(--ease-out), filter .45s var(--ease-out)}
+.card.hover:hover .card-img{transform:scale(1.06) translateY(-2px)}
+.card.hover:hover .badges span{filter:brightness(1.1)}
+.card-body{padding:16px;display:flex;flex-direction:column;height:100%}
 .card-body h3{margin:0 0 6px;font-size:16px}
 .badges{display:flex;gap:8px;flex-wrap:wrap}
 .badges span{font-size:12px;padding:4px 8px;border-radius:999px;background:color-mix(in hsl, var(--brand) 12%, transparent);color:var(--brand);border:1px solid color-mix(in hsl, var(--brand) 35%, transparent)}
-.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
 
 /* Skills */
 .skills-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.skill-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px;border:1px dashed var(--border);border-radius:14px;background:color-mix(in hsl, var(--card) 92%, transparent);transition: transform .2s ease, box-shadow .2s ease}
-.skill-item .icon{width:26px;height:26px;color:var(--brand)}
+.skill-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px;border:1px dashed var(--border);border-radius:14px;background:color-mix(in hsl, var(--card) 92%, transparent);transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out)}
+.skill-item .icon{width:26px;height:26px;color:var(--brand);transition: transform .35s var(--ease-out)}
 .skill-item span{font-size:13px}
-.skill-item:hover{ transform: translateY(-3px); box-shadow: 0 8px 18px color-mix(in hsl, var(--bg) 40%, #000 60%); }
+.skill-item:hover{ transform: translateY(-4px); box-shadow: 0 10px 22px color-mix(in hsl, var(--bg) 40%, #000 60%); }
+.skill-item:hover .icon{ transform: scale(1.12) }
 
 /* Timeline */
-.timeline{display:grid;gap:14px}
-.timeline-item{display:flex;gap:12px;align-items:flex-start;background:color-mix(in hsl, var(--card) 94%, transparent);border:1px solid var(--border);padding:14px;border-radius:14px}
-.timeline .dot{width:10px;height:10px;margin-top:6px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 0 0 4px var(--ring);flex:none}
+.timeline{display:grid;gap:14px;grid-template-columns:repeat(2, minmax(0,1fr))}
+.timeline-item{display:flex;gap:12px;align-items:center;flex-direction:column;background:color-mix(in hsl, var(--card) 94%, transparent);border:1px solid var(--border);padding:14px;border-radius:14px;text-align:center}
+.timeline .dot{width:10px;height:10px;margin:0 0 8px 0;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 0 0 4px var(--ring);flex:none}
 .timeline .content h3{margin:0 0 4px;font-size:16px}
+.timeline .content{ text-align:center }
+/* Left-align role descriptions within centered experience cards */
+.timeline .content p.muted{ text-align:left; width:fit-content; margin-left:auto; margin-right:auto; padding-left:1.2rem }
 .meta{color:var(--muted);font-size:13px}
-.mini{margin:.2rem 0 0 .8rem;color:var(--muted);line-height:1.6}
+.mini{margin:.2rem 0 0 0;color:var(--muted);line-height:1.6; padding-left:1.2rem; list-style-position:outside; text-align:left; width:fit-content; margin-left:auto; margin-right:auto}
+/* Center a specific timeline card across both columns */
+.timeline-item.centered{ grid-column: 1 / -1; justify-self:center; width:100%; max-width: 540px; }
 
 /* Certs */
 .cert-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.cert-item{display:flex;align-items:center;gap:10px;border:1px solid var(--border);padding:12px;border-radius:12px;background:color-mix(in hsl, var(--card) 94%, transparent)}
+.cert-item{display:flex;align-items:center;justify-content:flex-start;gap:10px;border:1px solid var(--border);padding:12px;border-radius:12px;background:color-mix(in hsl, var(--card) 94%, transparent);text-align:left}
+#certs .cert-list{ width:fit-content; margin:8px auto 0; }
+#education .cert-list{ width:fit-content; margin:8px auto 0; }
+/* Education list items: keep block centered but text/content left-aligned */
+#education .cert-item{justify-content:flex-start;text-align:left}
+/* Left-align only the last two certification items (Indaba, Data Science Summit) */
+#certs .cert-list .cert-item:nth-child(3),
+#certs .cert-list .cert-item:nth-child(4){
+  justify-content:flex-start; text-align:left;
+}
 .cert-item svg{width:18px;height:18px;color:var(--brand)}
 
 /* Gallery */
@@ -91,14 +155,20 @@ a:hover{text-decoration:underline}
 /* Stack image + caption with a small gap */
 .shot-item { display:flex; flex-direction:column; gap:8px; }
 
-/* Keep your existing image styling */
-.shot { display:block; width:100%; border-radius:14px; border:1px solid var(--border); cursor:zoom-in; }
+/* Uniform gallery shot sizing (consistent cards) */
+.shot {
+  display:block; width:100%;
+  height: clamp(180px, 24vw, 240px); /* responsive fixed height */
+  object-fit: cover; /* crop to maintain uniform size */
+  border-radius:14px; border:1px solid var(--border); cursor:zoom-in;
+}
 
 /* Caption style (placeholder text) */
 .shot-caption { font-size:.9rem; line-height:1.4; text-align:center; color:var(--muted, #6b7280); }
 
 /* Contact */
 .contact-card{border:1px solid var(--border);border-radius:16px;padding:18px;background:color-mix(in hsl, var(--card) 94%, transparent);text-align:center}
+.contact-card .btn-row{justify-content:center}
 .btn.linkedin svg{ color:#0A66C2; }
 
 /* Footer */
@@ -118,13 +188,19 @@ a:hover{text-decoration:underline}
 /* Reveal animations */
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+/* Unique motion using keyframes (overrides above when visible) */
+.reveal{opacity:0;transform: translateY(12px) scale(.985)}
+.reveal.visible{animation: rise var(--dur) var(--ease-out) forwards}
+@keyframes rise{from{opacity:0;transform: translateY(14px) scale(.985)} to{opacity:1;transform: translateY(0) scale(1)}}
 
 /* Headshot rounded square and size */
 .hero-image.small-headshot { display:flex; align-items:center; justify-content:center; }
 .hero-image.small-headshot img{
-  width: 220px; height: 220px; object-fit: cover;
+  width: clamp(200px, 26vw, 340px); height: clamp(200px, 26vw, 340px); object-fit: cover;
   border-radius: 16px; border:1px solid var(--border);
   box-shadow: 0 6px 18px color-mix(in hsl, var(--bg) 50%, #000 50%);
+  position: relative; z-index: 10000; /* ensure no global overlays reduce perceived quality */
+  image-rendering: auto; /* let browser choose best quality */
 }
 
 /* Responsive */
@@ -134,8 +210,11 @@ a:hover{text-decoration:underline}
 @media (max-width: 800px){
   .hero{grid-template-columns:1fr}
   .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-grid.grid-4{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{grid-template-columns:1fr}
 }
+@media (max-width: 1100px){ .card-grid.grid-4{ grid-template-columns:repeat(2, minmax(280px, 1fr)); justify-content:center; } }
 @media (max-width: 560px){
   .card-grid, .gallery-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -165,5 +244,5 @@ body::before{
     radial-gradient(var(--texture-dot) 1px, transparent 1px);
   background-size:8px 8px, 8px 8px;
   background-position:0 0, 4px 4px;
-  opacity:.22;                  /* 0.15–0.35 is a good range */
+  opacity:.14;                  /* soften texture to avoid grain on images */
 }

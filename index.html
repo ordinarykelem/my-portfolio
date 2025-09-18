@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelem Richard Bampoe-Addo • Website Portfolio</title>
-  <meta name="description" content="Hello, I'm Kelem — a frontend developer in training (MEST GROW Program) based in Accra, Ghana." />
+  <title>Kelem Bampoe-Addo — Portfolio</title>
+  <meta name="description" content="Web Developer and Administrator in Accra, Ghana. HTML, CSS, JavaScript, Python (NiceGUI). Deploys via GitHub, Netlify, Render. Canva Pro and Figma." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,10 +28,9 @@
     <symbol id="i-book" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12V2M8 4h8v14H8z"/></symbol>
     <symbol id="i-image" viewBox="0 0 24 24"><path fill="currentColor" d="M21 19V5H3v14zm0 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2M8.5 13.5 11 17l2.5-3l3.5 4H7zM8 8a2 2 0 1 1-2 2a2 2 0 0 1 2-2"/></symbol>
   </svg>
-
   <header class="site-header">
     <div class="container nav">
-       <button id="themeToggle" class="icon-btn" aria-label="Toggle theme"><svg><use href="#i-sun"/></svg></button>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme"><svg><use href="#i-sun"/></svg></button>
       <nav class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -39,38 +38,33 @@
         <a href="#certs">Certs</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact" class="btn small">Contact</a>
-       
       </nav>
     </div>
   </header>
-
   <main>
     <!-- HERO -->
     <section class="hero container" id="home">
       <div class="hero-text reveal">
-        <p class="kicker">Hello, I’m</p>
+        <p class="kicker">Hey! This is</p>
         <h1>Kelem Bampoe-Addo</h1>
-        <p class="sub">Web Developer Trainee | MEST Africa • GROW Program (2025)</p>
+        <p class="sub">Web Developer & Administrator | Accra, Ghana</p>
         <div class="btn-row">
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn ghost" href="#contact">Hire Me</a>
-         <a class="btn ghost"
-          href="https://docs.google.com/document/d/1BdReqc4VAYbUKKLKgWRIhwfMnBruRCEUqaZ5h2qvL7M/export?format=pdf"
-          download="Kelem-Richard-CV.pdf">
-          Download CV
-          </a>
+          <a class="btn ghost" href="https://docs.google.com/document/d/1zpspl-ERvPxjVWkDZGeMTmYUzhz_sjnMDHgoEIUnfxY/export?format=pdf" download="Kelem-Bampoe-Addo-CV.pdf">Download CV</a>
         </div>
         <div class="quick-links">
           <a href="mailto:kelembampoeaddo@gmail.com" class="icon-link"><svg><use href="#i-mail"/></svg> Email</a>
-          <a href="https://www.linkedin.com/in/kelem" target="_blank" rel="noopener" class="icon-link linkedin"><svg><use href="#i-linkedin"/></svg> LinkedIn</a>
+          <a href="https://www.linkedin.com/in/kelem/" target="_blank" rel="noopener" class="icon-link linkedin"><svg><use href="#i-linkedin"/></svg> LinkedIn</a>
+          <a href="https://github.com/ordinarykelem" target="_blank" rel="noopener" class="icon-link"><svg><use href="#i-git"/></svg> GitHub</a>
           <a href="https://medium.com/@kelembampoeaddo" target="_blank" rel="noopener" class="icon-link"><svg><use href="#i-medium"/></svg> Medium</a>
+          <a href="tel:+233577026284" class="icon-link">📞 Phone</a>
         </div>
       </div>
       <div class="hero-image reveal small-headshot">
-        <img src="images/profile-placeholder.jpg" alt="Profile placeholder for Kelem Richard Bampoe-Addo"/>
+        <img src="images/profile-placeholder.jpg" alt="Profile photo of Kelem Bampoe-Addo"/>
       </div>
     </section>
-
     <!-- ========== ABOUT ========== -->
     <section class="container" id="about">
       <div class="section-head">
@@ -78,91 +72,102 @@
       </div>
       <div class="about-card">
         <p>
-          I’m a people‑centred, curious <strong>frontend developer in 
-          training</strong> who enjoys turning ideas into clear, accessible interfaces.
-          At <strong>MEST GROW program,</strong> I’m growing fast with Python, HTML, CSS 
-          and JavaScript, while my background in Political Science helps me
-          communicate clearly, work in teams, and build for real users.
+          Web Developer and Administrator with hands-on experience in HTML, CSS, JavaScript, and <strong>Python (NiceGUI)</strong>,
+          skilled in deploying projects through GitHub, Netlify, and Render. Strong background in project coordination, administration, and documentation,
+          ensuring smooth workflows and timely delivery. Proficient in digital design and content creation using <strong>Canva Pro</strong> and <strong>Figma</strong>,
+          with an eye for detail and user-friendly solutions.
         </p>
       </div>
     </section>
-
     <!-- PROJECTS -->
     <section class="container" id="projects">
       <div class="section-head">
         <h2>Projects</h2>
-        <span class="pill">Built during training</span>
+        <span class="pill">Selected work</span>
       </div>
       <div class="card-grid">
-        <article class="card hover reveal">
+        <article class="card hover reveal" data-live="https://spaceaccra.netlify.app/" role="link" tabindex="0" aria-label="View live: SpaceAccra Corporate Website">
+          <img src="images/project-3.jpg" alt="SpaceAccra corporate website screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>SpaceAccra Corporate Website</h3>
+            <div class="badges"><span>Responsive</span><span>Corporate</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="https://spaceaccra.netlify.app/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-external"/></svg> View Live</a>
+            </div>
+          </div>
+        </article>
+        <article class="card hover reveal" data-live="https://asa-sitevisit-rsvp.netlify.app/" role="link" tabindex="0" aria-label="View live: ASA Site Visit Web App">
+          <img src="images/project-2.jpg" alt="ASA Site Visit web app screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>ASA Site Visit Web App</h3>
+            <div class="badges"><span>Supabase</span><span>RSVP</span><span>Responsive</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="https://asa-sitevisit-rsvp.netlify.app/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-external"/></svg> View Live</a>
+              <a class="btn small ghost" href="https://github.com/ordinarykelem" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card hover reveal" data-live="https://advertmgt.netlify.app/" role="link" tabindex="0" aria-label="View live: Advertisement Management Platform">
+          <img src="images/project-1.jpg" alt="Advertisement management platform screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>Advertisement Management Platform</h3>
+            <div class="badges"><span>CRUD</span><span>Supabase</span><span>Search</span></div>
+            <div class="card-actions">
+              <a class="btn small" href="https://advertmgt.netlify.app/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-external"/></svg> View Live</a>
+            </div>
+          </div>
+        </article>
+        <article class="card hover reveal" data-live="https://portfolio-kelem.netlify.app/" role="link" tabindex="0" aria-label="View live: Personal Portfolio Website">
           <img src="images/project-1.jpg" alt="Portfolio website screenshot" class="card-img"/>
           <div class="card-body">
-            <h3>Portfolio Website</h3>
-            <div class="badges"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <h3>Personal Portfolio Website</h3>
+            <div class="badges"><span>HTML</span><span>CSS</span><span>JS</span><span>Light/Dark</span></div>
             <div class="card-actions">
-              <a class="btn small"
-                href="https://github.com/ordinarykelem/my-portfolio"
-                target="_blank" rel="noopener noreferrer">
-                <svg><use href="#i-external"/></svg> GitHub
-              </a>
+              <a class="btn small" href="https://portfolio-kelem.netlify.app/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-external"/></svg> View Live</a>
+              <a class="btn small ghost" href="https://github.com/ordinarykelem/my-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card hover reveal">
+          <img src="images/project-2.jpg" alt="College event manager app screenshot" class="card-img"/>
+          <div class="card-body">
+            <h3>College Event Manager (NiceGUI)</h3>
+            <div class="badges"><span>Python</span><span>NiceGUI</span><span>CRUD</span><span>Admin</span></div>
+            <div class="card-actions">
               <a class="btn small ghost" href="#contact">Request Demo</a>
+              <a class="btn small" href="https://github.com/ordinarykelem" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </article>
         <article class="card hover reveal">
-          <img src="images/project-2.jpg" alt="Team sprint app screenshot" class="card-img"/>
+          <img src="images/project-1.jpg" alt="Advertisement management (NiceGUI) screenshot" class="card-img"/>
           <div class="card-body">
-            <h3>Team Web App Sprint</h3>
-            <div class="badges"><span>UI</span><span>Agile</span><span>Presentation</span></div>
+            <h3>Advertisement Management (NiceGUI)</h3>
+            <div class="badges"><span>Python</span><span>NiceGUI</span><span>Dashboard</span></div>
             <div class="card-actions">
-            <a class="btn small"
-              href="https://drive.google.com/file/d/1BB6-4ceTsCBSU90E14Zf5hHHI3lrYfg1/view"
-              target="_blank" rel="noopener noreferrer">
-              <svg aria-hidden="true"><use href="#i-external"/></svg> Demo
-            </a>
-            <!-- If this should go to your GitHub profile -->
-            <a class="btn small ghost"
-              href="https://github.com/ordinarykelem"
-              target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-            </div>
-          </div>
-        </article>
-        <article class="card hover reveal">
-          <img src="images/project-3.jpg" alt="Python mini projects screenshot" class="card-img"/>
-          <div class="card-body">
-            <h3>Python Mini-Projects</h3>
-            <div class="badges"><span>Python</span><span>Logic</span></div>
-            <div class="card-actions">
-              <a class="btn small"
-                href="https://github.com/ordinarykelem/atm_simulator"
-                target="_blank" rel="noopener noreferrer">
-                <svg aria-hidden="true"><use href="#i-external"/></svg> GitHub
-              </a>
+              <a class="btn small ghost" href="#contact">Request Demo</a>
+              <a class="btn small" href="https://github.com/ordinarykelem" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </article>
       </div>
     </section>
-
     <!-- SKILLS -->
     <section class="container" id="skills">
       <div class="section-head">
         <h2>Skills</h2><span class="pill">Core tools</span>
       </div>
       <div class="skills-grid">
-        <div class="skill-item reveal"><svg class="icon"><use href="#i-python"/></svg><span>Python (beginner)</span></div>
-        <div class="skill-item reveal"><svg class="icon"><use href="#i-html"/></svg><span>HTML5</span></div>
-        <div class="skill-item reveal"><svg class="icon"><use href="#i-css"/></svg><span>CSS3</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-html"/></svg><span>HTML</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-css"/></svg><span>CSS</span></div>
         <div class="skill-item reveal"><svg class="icon"><use href="#i-js"/></svg><span>JavaScript</span></div>
+        <div class="skill-item reveal"><svg class="icon"><use href="#i-python"/></svg><span>Python (NiceGUI)</span></div>
         <div class="skill-item reveal"><svg class="icon"><use href="#i-git"/></svg><span>Git & GitHub</span></div>
         <div class="skill-item reveal"><svg class="icon"><use href="#i-briefcase"/></svg><span>ClickUp</span></div>
         <div class="skill-item reveal"><svg class="icon"><use href="#i-book"/></svg><span>Google Workspace</span></div>
         <div class="skill-item reveal"><svg class="icon"><use href="#i-image"/></svg><span>Canva Pro</span></div>
       </div>
     </section>
-
     <!-- EXPERIENCE -->
     <section class="container" id="experience">
       <div class="section-head">
@@ -173,103 +178,171 @@
           <div class="dot"></div>
           <div class="content">
             <h3>Administrator & Project Coordinator — Space Turnkey Solutions</h3>
-            <p class="meta">2023–Present • Hybrid</p>
+            <p class="meta">2023–Present — Hybrid (Accra)</p>
+            <p class="muted">Managing operations, documentation, and cross‑team coordination at Space Turnkey Solutions.</p>
             <ul class="mini">
-              <li>Built ClickUp boards and automated reminders.</li>
-              <li>Standardized Google Sheets/Docs trackers.</li>
-              <li>Structured action items and weekly dashboards.</li>
+              <li>Implemented ClickUp for task tracking with automated reminders, boosting on-time project completion and team accountability.</li>
+              <li>Standardized reporting in Google Docs/Sheets for weekly updates, improving leadership visibility into project decisions.</li>
+              <li>Coordinated cross-functional project timelines and documented SOPs to scale repeatable processes as the team expanded.</li>
             </ul>
           </div>
         </div>
         <div class="timeline-item reveal">
           <div class="dot"></div>
           <div class="content">
-            <h3>Tech & Society Writer — Medium</h3>
-            <p class="meta">2023–Present • Remote</p>
+            <h3>Tech & Society Writer — Medium (Freelance)</h3>
+            <p class="meta">2023–Present — Remote</p>
+            <p class="muted">Publicly writing about technology, governance, and community impact to engage a broad audience.</p>
             <ul class="mini">
-              <li>Published on AI and governance in Africa.</li>
-              <li>Deep Learning Indaba 2023 reflections.</li>
+              <li>Published articles and event reflections on Medium, including insights from Deep Learning Indaba 2023, to educate and spark discussion in the tech community.</li>
+              <li>Wrote accessible explainers connecting AI trends to everyday life, building a following through clear, relatable content.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Presiding Officer — Electoral Commission of Ghana</h3>
+            <p class="meta">2023 & 2024 — Ghana (Multiple Regions)</p>
+            <p class="muted">Led polling station teams during national elections with a focus on compliance and community trust.</p>
+            <ul class="mini">
+              <li>Oversaw polling operations in District Assembly (2023) and General Elections (2024), managing a team of election staff and sensitive materials at each station.</li>
+              <li>Ensured strict adherence to election protocols and documented all incidents, maintaining 100% procedural integrity under high-pressure conditions.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Volunteer — Deep Learning Indaba 2023</h3>
+            <p class="meta">Sep 2023 — Accra, Ghana</p>
+            <p class="muted">Contributed to organizing Africa’s premier AI conference, enhancing the experience for participants and speakers.</p>
+            <ul class="mini">
+              <li>Assisted with event logistics and attendee coordination for ~70 participants, facilitating workshop sessions and networking activities.</li>
+              <li>Engaged with the global AI community on-site, helping to gather attendee feedback and foster a welcoming atmosphere for knowledge sharing.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Administration & HR Support (NSS/Voluntary) — SSNIT</h3>
+            <p class="meta">2021–2023 — Accra, Ghana</p>
+            <p class="muted">Provided back-office administration and people operations support in a high-trust, confidential environment (national pension fund office).</p>
+            <ul class="mini">
+              <li>Assisted with HR documentation, staff training schedules, and records management, ensuring accurate and up-to-date employee information.</li>
+              <li>Streamlined internal workflows by refining filing systems and communication processes, improving efficiency in the department.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Field Supervisor — Afes Consult (Data Audit & Validation)</h3>
+            <p class="meta">2022 — Ghana (Field)</p>
+            <p class="muted">On-ground oversight for a nationwide data audit project in the public sector.</p>
+            <ul class="mini">
+              <li>Coordinated field teams across multiple districts to ensure adherence to data validation protocols during audits.</li>
+              <li>Logged discrepancies and escalated issues promptly, contributing to a comprehensive final validation report for the client.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal centered">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Regional Trainer & Field Supervisor — Ghana Statistical Service (PHC 2021)</h3>
+            <p class="meta">2021 — Eastern Region, Ghana</p>
+            <p class="muted">Training and supervision role for the national Population & Housing Census 2021.</p>
+            <ul class="mini">
+              <li>Trained 40+ enumerators on census procedures, digital data collection tools, and data quality standards before field deployment.</li>
+              <li>Supervised field operations and monitored data integrity, resolving issues in real-time to ensure accurate and complete census data collection.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
     <!-- CERTIFICATIONS -->
     <section class="container" id="certs">
       <div class="section-head">
         <h2>Certifications & Training</h2><span class="pill">Proof</span>
       </div>
       <ul class="cert-list">
-        <li class="cert-item reveal"><svg><use href="#i-certificate"/></svg> MEST Africa — GROW Web Developer Program (Aug–Nov 2025)</li>
-        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Deep Learning Indaba 2023 — Certificate of Participation</li>
-        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Ghana Data Science Conference 2024 — Certificate of Participation</li>
-        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Web Development Fundamental (IBM) — Issued Apr 2025</li>
+        <li class="cert-item reveal"><svg><use href="#i-certificate"/></svg> MEST Africa GROW Web Developer Program (Aug–Nov 2025)</li>
+        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> IBM Web Development Fundamentals — Certificate (Apr 2025)</li>
+        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Deep Learning Indaba 2023 — Volunteer & Participant</li>
+        <li class="cert-item reveal"><svg><use href="#i-award"/></svg> Ghana Data Science Summit 2023 — Participant</li>
       </ul>
     </section>
-
     <!-- EDUCATION -->
     <section class="container" id="education">
       <div class="section-head">
         <h2>Education</h2><span class="pill">Academic</span>
       </div>
       <ul class="cert-list">
-        <li class="cert-item reveal"><svg><use href="#i-book"/></svg> University of Ghana — BA Political Science (2017–2021)</li>
+        <li class="cert-item reveal"><svg><use href="#i-book"/></svg> University of Ghana — B.A. Political Science & Study of Religions (2017–2021)</li>
+        <li class="cert-item reveal"><svg><use href="#i-book"/></svg> Leadership: President, Religions Students Association of Ghana (2020/2021)</li>
       </ul>
     </section>
-
     <!-- ========== GALLERY ========== -->
     <section class="container" id="gallery">
       <div class="section-head">
         <h2>Gallery</h2><span class="pill">Deep Learning Indaba</span>
       </div>
-
       <div class="gallery-grid">
         <figure class="shot-item">
           <img class="shot" src="images/gallery-1.jpg" alt="Gallery photo 1" loading="lazy" />
           <figcaption class="shot-caption">Deep learning insights with Hugo Larochelle</figcaption>
         </figure>
-
         <figure class="shot-item">
           <img class="shot" src="images/gallery-2.jpg" alt="Gallery photo 2" loading="lazy" />
           <figcaption class="shot-caption">Advancing AI across Africa</figcaption>
         </figure>
-
         <figure class="shot-item">
           <img class="shot" src="images/gallery-3.jpg" alt="Gallery photo 3" loading="lazy" />
           <figcaption class="shot-caption">Stay curious. Keep building</figcaption>
         </figure>
+
+        <figure class="shot-item">
+          <img class="shot" src="images/deepmind.jpg" alt="Project highlights and UI details" loading="lazy" />
+          <figcaption class="shot-caption">Project highlights and UI details</figcaption>
+        </figure>
+
+        <figure class="shot-item">
+          <img class="shot" src="images/project-2.jpg" alt="Showcase photo B" loading="lazy" />
+          <figcaption class="shot-caption">Responsive layouts in action</figcaption>
+        </figure>
+
+        <figure class="shot-item">
+          <img class="shot" src="images/project-3.jpg" alt="Showcase photo C" loading="lazy" />
+          <figcaption class="shot-caption">Clean components and interactions</figcaption>
+        </figure>
       </div>
     </section>
-
-
     <!-- CONTACT -->
     <section class="container" id="contact">
       <div class="contact-card reveal">
-        <h2>Let’s work together</h2>
-        <p class="muted">Open to frontend immersion and junior roles.</p>
+        <h2>Let's work together</h2>
+        <p class="muted">Open to frontend roles and project coordination.</p>
         <div class="btn-row">
           <a class="btn" href="mailto:kelembampoeaddo@gmail.com"><svg><use href="#i-mail"/></svg> Email</a>
-          <a class="btn ghost linkedin" href="https://www.linkedin.com/in/kelem" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg> LinkedIn</a>
+          <a class="btn ghost" href="tel:+233577026284">📞 Call</a>
+          <a class="btn ghost linkedin" href="https://www.linkedin.com/in/kelem/" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg> LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/ordinarykelem" target="_blank" rel="noopener"><svg><use href="#i-git"/></svg> GitHub</a>
           <a class="btn ghost" href="https://medium.com/@kelembampoeaddo" target="_blank" rel="noopener"><svg><use href="#i-medium"/></svg> Medium</a>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Kelem Richard Bampoe‑Addo</div>
+    <div class="container">© <span id="year"></span> Kelem Bampoe-Addo</div>
   </footer>
-
   <!-- LIGHTBOX MODAL -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
     <button class="lightbox-close" aria-label="Close">&times;</button>
     <img id="lightboxImg" src="" alt="" />
   </div>
-
   <!-- BACK TO TOP -->
   <button id="toTop" class="to-top" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
-
   <script src="script.js"></script>
 </body>
 </html>
